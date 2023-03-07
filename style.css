@@ -1,5 +1,5 @@
 * {
-    font-family: "Montserrat";
+    font-family: sans;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -98,11 +98,17 @@ section{
     justify-content: space-between;
     align-items: center;
     column-gap: 16px;
+    overflow: hidden;
 }
 #landing img{
     width: 500px;
     border-radius: 20px;
 }
+/* @media only screen and (min-width:1024){
+    nav a{
+        display: inline;
+    }
+} */
 nav a{
     color: #fff;
     transition: 0.5s;
@@ -120,6 +126,7 @@ nav > a:hover{
     display: flex;
     justify-content: space-between;
     column-gap: 26px;
+    overflow: hidden;
 }
 #about > div{
     width: 50%;
@@ -288,8 +295,16 @@ footer p{
     gap: 32px;
 }
 @media only screen and (max-width:1200px){
+    .social-icon{
+        display: inline;
+    }
     .service-detail {
         gap: 24px;
+        display: inline;
+        grid-template-columns: repeat(1fr);
+    }
+    .service-detail-item:hover{
+        transform: scale(0.9);
     }
     .contact-detail {
         gap: 24px;
@@ -311,6 +326,12 @@ footer p{
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    #landing img{
+        width: 100%;
+    }
+    #about img{
+        width: 100%;
     }
     #landing >div {
         width: 100%;
